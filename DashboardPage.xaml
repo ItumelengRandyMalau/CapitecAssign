@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapitecAssign.DashboardPage"
+             Title="DashboardPage">
+    <VerticalStackLayout>
+
+        <!-- Header -->
+            <Label Text="For me" TextColor="White" BackgroundColor="DeepSkyBlue" HeightRequest="20" MinimumWidthRequest="20" HorizontalOptions="Center" Margin="20"/>
+
+            <Grid RowDefinitions="Auto,Auto" BackgroundColor="White" Padding="20">
+
+            <StackLayout>
+                <Label Text="hallo" TextColor="LightGrey" HorizontalOptions="EndAndExpand"/>
+                <Label Text="sawubona" TextColor="LightGrey" HorizontalOptions="StartAndExpand"/>
+                <Label Text="dumela" TextColor="LightGrey" HorizontalOptions="EndAndExpand" Margin="240,0,2,2"/>
+                <Label Text="molo" TextColor="LightGrey" HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            <Label Text="hello" FontSize="49" FontAttributes="Bold" TextColor="Red" HorizontalOptions="Center" />
+            <Label Text="Itumeleng" FontSize="28" TextColor="Grey" HorizontalOptions="CenterAndExpand" VerticalOptions="End" />
+        </Grid>
+
+        <!-- Action Buttons with Icons -->
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto, Auto" Margin="20,0 ,20, 20">
+            <Frame Grid.Row="0" Grid.Column="0" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="20, 20, 20,20">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="airtime_icon.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="Buy prepaid mobile" TextColor="Grey" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="0" Grid.Column="1" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="0, 20, 20,20">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="transfer_icon.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="Transfer money" TextColor="Grey" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" Grid.Column="0" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="20, 0, 20,0">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="pay_icon.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="Pay beneficiary" TextColor="Grey" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="1" Grid.Column="1" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="0, 0, 20,0">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="electricity_icon.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="Buy electricity" TextColor="Grey" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="2" Grid.Column="0" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="20, 20, 20,0">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="track_money.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="Track money" TextColor="Grey" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Grid.Row="2" Grid.Column="1" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="0, 20, 20,0">
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="coins.png" HeightRequest="40" WidthRequest="40"/>
+                    <Label Text="Send cash" TextColor="Grey" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+
+
+
+        <!-- Sign In Button -->
+        <Button Text="Sign In" BackgroundColor="DeepSkyBlue" TextColor="White" Margin="20, 0,20,0" />
+        
+        <!-- Scan to Pay -->
+        <Button Text="Scan to pay" BackgroundColor="DeepSkyBlue" TextColor="White" Margin="20,20, 20, 20" />
+
+    </VerticalStackLayout>
+</ContentPage>

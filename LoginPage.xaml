@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CapitecAssign.LoginPage"
+             Title="LoginPage">
+    <VerticalStackLayout>
+
+        <!-- Header -->
+        <Grid BackgroundColor="White" Padding="20">
+            <Label Text="For me" FontSize="Large" HorizontalOptions="Start" />
+        </Grid>
+
+        <!-- App Title -->
+        <Label Text="GlobalOne" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <!-- Remote PIN Input -->
+        <Entry Placeholder="Enter Remote PIN" IsPassword="True" />
+
+        <!-- Forgot PIN Link -->
+        <Label Text="Forgot PIN" TextDecorations="Underline" TextColor="Blue" HorizontalOptions="End" />
+
+        <!-- Biometrics Toggle -->
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Padding="10">
+            <Label Text="Biometrics" />
+            <Switch />
+        </StackLayout>
+
+        <!-- Submit Button -->
+        <Button Text="Submit" BackgroundColor="Blue" TextColor="White" />
+
+    </VerticalStackLayout>
+</ContentPage>
