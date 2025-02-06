@@ -8,8 +8,8 @@
     Title="CapitecAssign">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        Title="DashboardPage"
+        ContentTemplate="{DataTemplate local:DashboardPage}"
         Route="MainPage" />
 
 </Shell>

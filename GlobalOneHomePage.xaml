@@ -10,7 +10,9 @@
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Image Source="profile_icon.png" HeightRequest="40" WidthRequest="40"/>
+            <Frame BorderColor="DeepSkyBlue" CornerRadius="10">
+            <Image Source="profile_icon.png" HeightRequest="20" WidthRequest="20"/>
+            </Frame>
             <Label Text="GlobalOne" Grid.Column="1" FontSize="24" TextColor="White" VerticalOptions="Center" HorizontalOptions="Center"/>
         </Grid>
 
@@ -18,29 +20,29 @@
         <StackLayout Padding="10">
             <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
                 <HorizontalStackLayout>
-                    <Image Source="main_account_icon.png" HeightRequest="40" WidthRequest="40"/>
+                    <Image Source="transact_icon.png" HeightRequest="40" WidthRequest="40" Background="DeepSkyBlue"/>
                     <VerticalStackLayout>
                         <Label Text="Main Account" FontSize="16" FontAttributes="Bold" TextColor="DeepSkyBlue"/>
                         <Label Text="Available balance" FontSize="14" TextColor="Gray"/>
                     </VerticalStackLayout>
-                    <Label Text="R2211.91" FontSize="18" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                    <Label Text="R2211.91" FontSize="18" FontAttributes="Bold" HorizontalOptions="End" Margin="450, 10,50,3"/>
                 </HorizontalStackLayout>
             </Frame>
 
             <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
                 <HorizontalStackLayout>
-                    <Image Source="savings_icon.png" HeightRequest="40" WidthRequest="40"/>
+                    <Image Source="savings_icon.png" HeightRequest="40" WidthRequest="40" Background="Navy" Aspect="AspectFill"/>
                     <VerticalStackLayout>
                         <Label Text="Savings Plans" FontSize="16" FontAttributes="Bold" TextColor="DarkBlue"/>
                         <Label Text="Total saved" FontSize="14" TextColor="Gray"/>
                     </VerticalStackLayout>
-                    <Label Text="R0.00" FontSize="18" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                    <Label Text="R0.00" FontSize="18" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="460,20,2,0"/>
                 </HorizontalStackLayout>
             </Frame>
 
             <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
                 <HorizontalStackLayout>
-                    <Image Source="insure_icon.png" HeightRequest="40" WidthRequest="40"/>
+                    <Image Source="insure_icon.png" HeightRequest="40" WidthRequest="40" Background="Gray"/>
                     <VerticalStackLayout>
                         <Label Text="Insure" FontSize="16" FontAttributes="Bold" TextColor="Grey"/>
                         <Label Text="Cover for you and your family" FontSize="14" TextColor="Gray"/>
@@ -50,21 +52,27 @@
         </StackLayout>
 
         <!-- Live Better Section -->
-        <Label Text="Live Better" FontSize="18" FontAttributes="Bold" Padding="10"/>
-        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="5">
+        <Label Text="Live Better" FontSize="18" FontAttributes="Bold" Padding="10" TextColor="Gray" Margin="20,0,0,0"/>
+        <Frame BorderColor="LightGray" CornerRadius="10" Padding="10" Margin="20,0,0,2">
             <HorizontalStackLayout>
-                <Image Source="live_better_icon.png" HeightRequest="40" WidthRequest="40"/>
+                <Image Source="live_better_icon.png" HeightRequest="40" WidthRequest="40" Background="Blue"/>
                 <VerticalStackLayout>
-                    <Label Text="Live Better" FontSize="16" FontAttributes="Bold"/>
+                    <Label Text="Live Better" FontSize="16" FontAttributes="Bold" TextColor="DarkBlue"/>
                     <Label Text="Available balance" FontSize="14" TextColor="Gray"/>
                 </VerticalStackLayout>
-                <Label Text="R15.75" FontSize="18" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                <Label Text="R100" FontSize="18" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="460,0,0,20"/>
             </HorizontalStackLayout>
         </Frame>
 
         <!-- Favourites Section -->
-        <Label Text="Favourites" FontSize="18" FontAttributes="Bold" Padding="10"/>
-        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto, Auto" Margin="20,0 ,20, 20">
+
+
+        <Grid Margin="20,20,0,0">
+        <Label Text="Favourites" FontSize="18" FontAttributes="Bold" Padding="10" TextColor="Grey"/>
+        <Label Text="Edit >" FontSize="18" FontAttributes="Bold" Padding="10" TextColor="DeepSkyBlue"  HorizontalOptions="EndAndExpand" />
+        </Grid>
+        
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto, Auto" Margin="0,0 ,20, 20">
             <Frame Grid.Row="0" Grid.Column="0" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="20, 20, 20,20">
                 <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
                     <Image Source="airtime_icon.png" HeightRequest="40" WidthRequest="40"/>
@@ -93,19 +101,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <Frame Grid.Row="2" Grid.Column="0" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="20, 20, 20,0">
-                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                    <Image Source="track_money.png" HeightRequest="40" WidthRequest="40"/>
-                    <Label Text="Track money" TextColor="Grey" HorizontalTextAlignment="Center"/>
-                </VerticalStackLayout>
-            </Frame>
-
-            <Frame Grid.Row="2" Grid.Column="1" Padding="10" BackgroundColor="WhiteSmoke" CornerRadius="10" Margin="0, 20, 20,0">
-                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
-                    <Image Source="coins.png" HeightRequest="40" WidthRequest="40"/>
-                    <Label Text="Send cash" TextColor="Grey" HorizontalTextAlignment="Center"/>
-                </VerticalStackLayout>
-            </Frame>
+         
         </Grid>
 
         <!-- Bottom Navigation -->
@@ -117,11 +113,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Text="Home" ImageSource="home_icon.png"/>
-            <Button Grid.Column="1" Text="Cards" ImageSource="cards_icon.png"/>
-            <Button Grid.Column="2" Text="Transact" ImageSource="transact_icon.png"/>
-            <Button Grid.Column="3" Text="Messages" ImageSource="messages_icon.png"/>
-            <Button Grid.Column="4" Text="Explore" ImageSource="explore_icon.png"/>
+            <Button Grid.Column="0" Text="Home" ImageSource="home_icon.png" Background="White"/>
+            <Button Grid.Column="1" Text="Cards" ImageSource="cards_icon.png" Background="White"/>
+            <Button Grid.Column="2" Text="Transact" ImageSource="transact_icon.png" Background="White"/>
+            <Button Grid.Column="3" Text="Messages" ImageSource="messages_icon.png" Background="White"/>
+            <Button Grid.Column="4" Text="Explore" ImageSource="explore_icon.png" Background="White"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>

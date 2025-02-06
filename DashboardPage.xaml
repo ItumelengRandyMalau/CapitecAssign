@@ -6,7 +6,7 @@
     <VerticalStackLayout>
 
         <!-- Header -->
-            <Label Text="For me" TextColor="White" BackgroundColor="DeepSkyBlue" HeightRequest="20" MinimumWidthRequest="20" HorizontalOptions="Center" Margin="20"/>
+            <Button Text="For me" TextColor="White" BackgroundColor="DeepSkyBlue" HeightRequest="60" WidthRequest="80" HorizontalOptions="Center" Margin="20" CornerRadius="40"/>
 
             <Grid RowDefinitions="Auto,Auto" BackgroundColor="White" Padding="20">
 
@@ -68,10 +68,11 @@
 
 
         <!-- Sign In Button -->
-        <Button Text="Sign In" BackgroundColor="DeepSkyBlue" TextColor="White" Margin="20, 0,20,0" />
+        <Button Text="Sign In" BackgroundColor="DeepSkyBlue" TextColor="White" Margin="20, 0,20,0" Clicked="Button_Clicked" />
         
         <!-- Scan to Pay -->
-        <Button Text="Scan to pay" BackgroundColor="DeepSkyBlue" TextColor="White" Margin="20,20, 20, 20" />
+        <Button  BackgroundColor="DeepSkyBlue" TextColor="White" Margin="20,20, 20, 20" ImageSource="qr_code.png" HeightRequest="40" WidthRequest="70"  CornerRadius="20"/>
+        <Label Text="Scan to pay" HorizontalOptions="Center"/>
 
     </VerticalStackLayout>
 </ContentPage>
